@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background-color: white;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.45;
+}
+
+.container{
+    padding:10%;
+    flex: 1 1 80%;
+    min-height: 100vh;
+}
+
+.sidebar{
+    flex: 1 1 20%;
+    background-color: #eee;
+    padding: 30px;
+    min-width: 300px;
+}
+
+.logo{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+@media (min-width:1500px){
+    .logo{
+    margin-bottom: 50px;
+    }
+}
+
+.nav-items{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    color: #000;
+}
+
+@media (min-width:1500px){
+    .nav-items{
+        display: block;
+        margin: 50px 0;
+    }
+}
+
+.gridbox{
+    display: grid;
+    height: 100%;
+    grid-template-rows:repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-items{
+    background-color: #eee;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-items.small{
+    grid-row: span 1;
+    grid-column: span 1;
+}
+
+.grid-items.medium{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+ 
+.grid-items.large{
+    grid-row: span 3;
+    grid-column: span 3;
+}
+
+.grid-items.tall{
+    grid-row: 4 / span 3;
+    grid-column: 4 / span 2;
+}
+
+.grid-items.wide{
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+.img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all ease .3s;
+    opacity: .5;
+    background-image: linear-gradient(to center, rgba(133, 193, 233 ),rgba(174, 214, 241))
+}
+ 
+.img:hover{
+    opacity: .8;
+    transition: all ease .2s;
+}
+
+.img1{
+    background-image: url("donkeys.jpeg");
+}
+
+.img2{
+    background-image: url("flamingo.jpeg");
+}
+
+.img3{
+    background-image: url("goats.jpeg");
+}
+
+.img4{
+    background-image: url("monkeys.jpeg");
+}
+
+.img5{
+    background-image: url("rabbits.jpg");
+}
+
+.img6{
+    background-image: url("rhino.jpeg");
+}
